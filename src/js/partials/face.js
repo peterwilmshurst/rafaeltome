@@ -204,8 +204,9 @@ function animateFace() {
     var mouseX = 0;
     var relMouseX = 520;
     var xp = 520;
-    frameRate = 30;
-    timeInterval = Math.round(1000 / frameRate);
+    var frameRate = 30;
+    var timeInterval = Math.round(1000 / frameRate);
+    var loop = loop;
 
     // Firstly animate the bottom content onto the page
     animateContent();
