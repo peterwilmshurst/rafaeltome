@@ -1,0 +1,298 @@
+
+/* Homepage Half Face */
+.face {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+
+    .face-img {
+        display: block;
+        margin: 0px;
+        max-width: 100%;
+    }
+
+    a {
+        color: #666666;
+        text-decoration: none;
+    }
+
+    .designer {
+        left: 0;
+    }
+
+    .coder {
+        right: 0;
+        text-align: right;
+    }
+
+    .designer,
+    .coder {
+        position: absolute;
+        width: 40%;
+        display: block;
+        z-index: 10;
+        height: 15%;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+
+        h1 {
+            font-size: 1rem;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    .designer-img,
+    .coder-img,
+    .designer-bg,
+    .coder-bg {
+        display: none;
+    }
+
+    .designer {
+        .description {
+            padding-left: 1rem;
+        }
+    }
+
+    .coder {
+        .description {
+            padding-right: 1rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 321px) {
+    .face {
+
+        .designer,
+        .coder {
+            h1 {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 376px) {
+    .face {
+
+        .designer,
+        .coder {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .face {
+
+        .designer,
+        .coder {
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .face {
+
+        .designer,
+        .coder {
+            h1 {
+                font-size: 2.25rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .face {
+
+        .designer,
+        .coder {
+            width: 25%;
+            height: 35%;
+
+            h1 {
+                font-size: 2.25rem;
+            }
+
+            .more {
+                display: none;
+            }
+
+            p {
+                display: block;
+                font-size: 1rem;
+                margin: 0px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 860px) {
+    .face {
+
+        .designer,
+        .coder {
+            width: 30%;
+            height: 30%;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .face {
+
+        .designer,
+        .coder {
+            height: 40%;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .more {
+                display: inline;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+    .face {
+        width: 1040px;
+        height: 600px;
+        position: relative;
+        margin: 0 auto;
+
+        .coder {
+            width: 520px;
+            height: 600px;
+            top: 0px;
+            position: absolute;
+            text-align: left;
+            right: 0px;
+
+            .description {
+                position: absolute;
+                top: 80px;
+                width: 270px;
+                right: 0px;
+            }
+
+            .arrow {
+                width: 85px;
+                height: 140px;
+                background: url(../img/sprite.png) no-repeat;
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 0px;
+                background-position: 0px -751px;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.4em;
+            }
+        }
+
+        .designer {
+            width: 520px;
+            height: 600px;
+            top: 0px;
+            position: absolute;
+            left: 0px;
+
+            .description {
+                position: absolute;
+                top: 80px;
+                width: 270px;
+                left: 0px;
+            }
+
+            .arrow {
+                width: 85px;
+                height: 140px;
+                background: url(../img/sprite.png) no-repeat;
+                display: block;
+                position: absolute;
+                top: 20px;
+                left: 0px;
+                background-position: 0px -892px;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.4em;
+            }
+        }
+
+        .designer-img {
+            width: 420px;
+            height: 600px;
+            position: absolute;
+            top: 0;
+            background: url(../img/sprite-home.png) 0 0 no-repeat;
+            display: block;
+            z-index: 1;
+            background-position: 0px -600px;
+            left: 100px;
+        }
+
+        .coder-img {
+            width: 420px;
+            height: 600px;
+            position: absolute;
+            top: 0;
+            background: url(../img/sprite-home.png) 0 0 no-repeat;
+            display: block;
+            z-index: 1;
+            background-position: 100% 0px;
+            right: 100px;
+        }
+
+        .designer-bg {
+            width: 420px;
+            height: 200px;
+            position: absolute;
+            bottom: 0px;
+            background: url(../img/sprite-home.png) 0 -1300px no-repeat;
+            display: block;
+            left: 100px;
+        }
+
+        .coder-bg {
+            width: 420px;
+            height: 200px;
+            position: absolute;
+            bottom: 0px;
+            background: url(../img/sprite-home.png) 0 -1300px no-repeat;
+            display: block;
+            right: 100px;
+            background-position: 100% -1300px;
+        }
+
+        .face-img {
+            display: none;
+        }
+    }
+}

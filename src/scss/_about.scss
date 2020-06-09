@@ -1,0 +1,118 @@
+.about {
+    header {
+        background-color: transparent;
+    }
+
+    mark {
+        padding: 0.25rem;
+        background-color: $brand-red;
+        color: $white;
+    }
+
+    h3 {
+        display: inline-block;
+        padding: 0.25rem;
+        background-color: $brand-red;
+        color: $white;
+        text-transform: uppercase;
+
+    }
+}
+
+.about-rafa-video {
+    &__wrapper {
+        overflow: hidden;
+        background-size: cover;
+    }
+
+    video {
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        width: 90%;
+        z-index: -1;
+        transform: translateX(-50%) translateY(-10%);
+    }
+}
+
+
+.left-hand,
+.right-hand {
+    position: absolute;
+    left: 10%;
+    top: -80px;
+    z-index: 1;
+    width: 280px;
+    height: auto
+}
+
+.left-hand.loaded {
+    left: 3%;
+    -webkit-transition: left 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: left 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: left 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: left 1.5s cubic-bezier(0.77, 0, 0.175, 1)
+}
+
+.right-hand {
+    left: auto;
+    right: 10%
+}
+
+.right-hand.loaded {
+    right: 3%;
+    -webkit-transition: right 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: right 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: right 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: right 1.5s cubic-bezier(0.77, 0, 0.175, 1)
+}
+
+@-webkit-keyframes move-hand {
+    from {
+        -webkit-transform: translate(0, 0px) rotate(0deg)
+    }
+
+    65% {
+        -webkit-transform: translate(1px, 0) rotate(-0.2deg)
+    }
+
+    to {
+        -webkit-transform: translate(0, 0px) rotate(0deg)
+    }
+}
+
+.move-hand {
+    -webkit-animation-name: moveHand;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite
+}
+
+.about-rafa {
+    padding-top: 5rem;
+    width: 100%;
+    position: relative;
+    margin-top: 48vh;
+    z-index: -1;
+    background: #fff;
+
+    .heading,
+    .description {
+        padding: inherit 2rem;
+    }
+
+    .heading {
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+    }
+
+    .description {
+        margin-bottom: 2rem;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+    }
+}

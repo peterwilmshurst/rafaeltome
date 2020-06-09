@@ -1,0 +1,75 @@
+<div id="portfolio" class="portfolio-area">
+    <script id="portfolio-template" type="text/x-handlebars-template">
+        <ul class="portfolio-list columns is-multiline">
+        {{#each projects}}
+      
+        <li class="portfolio-item column is-one-quarter-desktop is-half-tablet">
+                <a href="./portfolio.html/{{this.slug}}">
+
+            <div class="portfolio-item__content-wrap">
+                    <div class="portfolio-item__content">
+                        <div class="portfolio-item__content__inner">
+                                 <h3 class="portfolio-title">{{this.name}}</h3> 
+                                 
+                            <p class="field-list">
+                                        {{#each this.fields}}
+                                            <span class="field-item">{{this}}</span>,
+                                        {{/each}}
+                                    </p>
+                        </div>
+                    </div>
+                   
+                            {{#if this.covers.[404]}}
+                            <div class="portfolio-item__image" style="background-image: url('{{this.covers.[404]}}');" alt="{{this.name}}">
+
+                            {{else}}
+                                {{#if this.covers.[230]}}
+                                <div class="portfolio-item__image" style="background-image: url('{{this.covers.[230]}}');" alt="{{this.name}}">
+                                {{else}}
+                                <div class="portfolio-item__image" style="background-image: url('{{this.covers.[202]}}');" alt="{{this.name}}">
+                                {{/if}}
+                            {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+        </li>
+      
+        {{/each}}
+    </ul>
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        var apiKey = 'eDUpmeKPYEe7yzspt2otnmOXozqZa0aG';
+        var userID = 'rafaeltome';
+
+        (function() {
+            var perPage = 12;
+            var behanceProjectAPI = '//www.behance.net/v2/users/' + userID +
+                '/projects?callback=?&api_key=' + apiKey + '&per_page=' + perPage;
+
+            function setPortfolioTemplate() {
+                var projectData = JSON.parse(sessionStorage.getItem('behanceProject')),
+                    getTemplate = $('#portfolio-template').html(),
+                    template = Handlebars.compile(getTemplate),
+                    result = template(projectData);
+                $('#portfolio').html(result);
+            };
+
+            if (sessionStorage.getItem('behanceProject')) {
+                setPortfolioTemplate();
+            } else {
+                $.getJSON(behanceProjectAPI, function(project) {
+                    var data = JSON.stringify(project);
+                    sessionStorage.setItem('behanceProject', data);
+                    setPortfolioTemplate();
+                });
+            };
+        })();
+    });
+
+    </script>
+</div>
