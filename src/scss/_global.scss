@@ -1,3 +1,96 @@
+/* typography */
+
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Futura PT, Arial, sans-serif; 
+    font-weight: 300;
+    font-size: 1.375rem;
+}
+
+h1 {
+    font-family: Futura PT, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 3.375rem;
+}
+
+h2 {
+    font-family: Futura PT, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-family: Futura PT, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+
+h4 {
+    font-family: Futura PT, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+h5 {
+    font-family: Futura PT, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.375rem;
+}
+
+/* body cards
+font-family: Futura PT, Arial, sans-serif; 
+font-weight: bold; 
+font-size: 1.125rem;
+ */
+
+ /* button text
+ font-family: Futura PT, Arial, sans-serif; 
+ font-weight: bold; 
+ font-size: 1.25rem;
+ */
+
+/* colours */
+
+.is-black {
+    color: $brand-black;
+}
+.is-grey {
+    color: $brand-grey;
+}
+.is-red {
+    color: $brand-red;
+}
+.is-dark-red {
+    color: $brand-dark-red;
+}
+.is-yellow {
+    color: $brand-yellow;
+}
+
+/* backgrounds */
+
+.has-yellow-bg {
+    background-color: $brand-yellow;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.has-red-bg {
+    background-color: $brand-red;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.has-black-bg {
+    background-color: $brand-black;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+// helpers
+
+.order-1 {
+    order: 1;
+}
+.order-2 {
+    order: 2;
 }
