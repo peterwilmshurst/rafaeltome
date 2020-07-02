@@ -1,5 +1,14 @@
-
 /* Homepage Half Face */
+.ugly-mug {
+    display: none;
+    visibility: hidden;
+
+    @include tablet {
+        display: flex;
+        visibility: visible;
+    }
+}
+
 .face {
     width: 100%;
     position: relative;
@@ -295,4 +304,22 @@
             display: none;
         }
     }
+}
+
+.mobile_i-am-rafa {
+    height: 100vh;
+    padding: 0;
+    background-image: url('../img/i-am-rafa.jpg');
+    background-image: -webkit-image-set(url(../img/i-am-rafa.jpg) 1x, url(../img/i-am-rafa@2x.jpg) 2x);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include tablet {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.partners-logo {
+    padding: 1rem;
 }

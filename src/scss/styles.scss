@@ -24,15 +24,30 @@
 */
 
 /* 3rd Party */
-@import "./node_modules/bulma/bulma.sass";
+//@import "./node_modules/bulma/bulma.sass";
 
 @import "variables";
+
+// Bulma
+@import './node_modules/bulma/sass/utilities/_all';
+@import './node_modules/bulma/sass/base/_all';
+@import './node_modules/bulma/sass/elements/_all';
+@import './node_modules/bulma/sass/form/_all';
+@import './node_modules/bulma/sass/components/_all';
+@import './node_modules/bulma/sass/grid/_all';
+@import './node_modules/bulma/sass/layout/_all';
+
+// Slick
+@import "./node_modules/slick-carousel/slick/slick.scss";
+
+
 @import "global";
 @import "header";
 @import "footer";
 
 @import "home";
 @import "blog";
+@import "about";
 
 @import "portfolio";
 @import "behance-portfolio";
