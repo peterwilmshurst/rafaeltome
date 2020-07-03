@@ -20,3 +20,26 @@
     }
 
 }
+
+.job {
+    margin-bottom: 2rem;
+
+    .date {
+        font-size: 1.125rem;
+        font-weight: lighter;
+    }
+    h3 {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .company {
+        font-size: 1.25rem;
+        font-weight: 700;
+
+    }
+    .location {
+        font-size: 1.375rem;
+        font-weight: lighter;
+    }
+}

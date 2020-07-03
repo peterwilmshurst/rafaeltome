@@ -6,6 +6,30 @@ body {
     font-size: 1.375rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &.underline {
+        display: inline-block;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 3.125rem;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            border-bottom: 3px solid $brand-red;
+        }
+    }
+}
+
 h1 {
     font-family: Futura PT, Arial, sans-serif;
     font-weight: 700;
@@ -101,6 +125,20 @@ section {
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        &.underline {
+
+            &:before {
+                border-bottom: 3px solid $brand-black;
+            }
+        }
+    }
 }
 
 .has-grey-bg {
@@ -130,30 +168,30 @@ section {
 
 // Slick dots
 .slick-dots {
-	display: flex;
-	justify-content: center;
-	margin: 0;
-	padding: 1rem 0;
-	list-style-type: none;
-	
-		li {
-			margin: 0 0.25rem;
-		}
-	
-		button {
-			display: block;
-			width: 1rem;
-			height: 1rem;
-			padding: 0;
-			
-			border: none;
-			border-radius: 100%;
-			background-color: $brand-black;
-			
-			text-indent: -9999px;
-		}
-	
-		li.slick-active button {
-			background-color: $brand-red;
-		}
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    list-style-type: none;
+
+    li {
+        margin: 0 0.25rem;
+    }
+
+    button {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        padding: 0;
+
+        border: none;
+        border-radius: 100%;
+        background-color: $brand-black;
+
+        text-indent: -9999px;
+    }
+
+    li.slick-active button {
+        background-color: $brand-red;
+    }
 }
