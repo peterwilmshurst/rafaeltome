@@ -15,10 +15,4 @@ footer {
         font-weight: 700;
         font-size: 1.25rem;
     }
-
-    .footer-logo {
-        @include desktop {
-            margin-right: 9rem;
-        }
-    }
 }
