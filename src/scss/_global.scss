@@ -28,6 +28,13 @@ h6 {
             left: 0;
             border-bottom: 3px solid $brand-red;
         }
+
+        &.center {
+            &:before {
+                left: 50%;
+                // need to minus 3.125rem (width)
+            }
+        }
     }
 }
 
@@ -72,6 +79,26 @@ font-size: 1.125rem;
  font-weight: bold; 
  font-size: 1.25rem;
  */
+
+a {
+    color: $brand-black;
+    font-weight: 700;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &.button {
+        text-decoration: none;
+        padding: 1.5rem 2rem;
+        font-size: 1.375rem;
+    }
+}
+
+p {
+    margin-bottom: 1rem;
+}
 
 /* spacing */
 
@@ -124,6 +151,24 @@ section {
             }
         }
     }
+
+    // testimonials
+    .kind-words {
+        color: $brand-black;
+
+        .company {
+            color: $brand-red;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: left;
+    }
+
+    li.slick-active button {
+        background-color: $brand-red !important;
+    }
 }
 
 .has-red-bg {
@@ -153,6 +198,16 @@ section {
                 border-bottom: 3px solid $brand-black;
             }
         }
+    }
+
+    // testimonials
+    .kind-words {
+        color: $white;
+
+        .company {
+            color: $brand-black;
+        }
+
     }
 }
 
@@ -199,6 +254,30 @@ section {
     }
 }
 
+
+// testimonials
+.kind-words {
+
+    .quote {
+        margin-bottom: 2rem;
+        font-weight: 700;
+        font-size: 1.25rem;
+        font-style: italic;
+    }
+
+    .name {
+        font-weight: 700;
+        font-size: 1.75rem;
+        margin-bottom: 0;
+    }
+
+    .company {
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+}
+
+
 // Slick dots
 .slick-dots {
     display: flex;
@@ -220,9 +299,17 @@ section {
         border-radius: 100%;
         background-color: $brand-black;
         text-indent: -9999px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+        }
     }
 
     li.slick-active button {
-        background-color: $brand-red;
+        background-color: $white;
     }
 }
