@@ -7,12 +7,23 @@ body {
     color: $brand-black;
 }
 
+hgroup {
+    h1 {
+        line-height: 4rem;
+    }
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
+    &.subheading {
+        font-size: 1.25rem;
+        color: $brand-red;
+    }
+
     &.underline {
         display: inline-block;
         padding-bottom: 1rem;
@@ -240,6 +251,46 @@ section {
 
 .order-2 {
     order: 2;
+}
+
+//margin
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.lead {
+    font-weight: 700;
+    font-size: 2rem;
+
+    a {
+        color: $brand-red;
+    }
+}
+
+.note {
+    font-size: 1.125rem;
 }
 
 // Social 
