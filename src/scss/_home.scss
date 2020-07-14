@@ -1,5 +1,5 @@
-/* Homepage Half Face */
-.ugly-mug {
+.ugly-mug,
+.scroll-down {
     display: none;
     visibility: hidden;
 
@@ -7,7 +7,34 @@
         display: flex;
         visibility: visible;
     }
+
+    .description {
+        h1 {
+            font-size: 2rem;
+            line-height: 2.25rem;
+            color: $brand-black;
+        }
+
+        p {
+            font-weight: 100;
+            font-size: 1.25rem;
+        }
+    }
 }
+
+.mobile_scroll-down {
+    @include tablet {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.scroll-down,
+.mobile_scroll-down {
+    justify-content: center;
+}
+
+
 
 .face {
     width: 100%;
@@ -45,13 +72,13 @@
         top: 0;
         bottom: 0;
 
-        h1 {
-            font-size: 1rem;
-        }
+        // h1 {
+        //     font-size: 1rem;
+        // }
 
-        p {
-            display: none;
-        }
+        // p {
+        //     display: none;
+        // }
     }
 
     .designer-img,
@@ -74,116 +101,116 @@
     }
 }
 
-@media only screen and (min-width: 321px) {
-    .face {
+// @media only screen and (min-width: 321px) {
+//     .face {
 
-        .designer,
-        .coder {
-            h1 {
-                font-size: 1.25rem;
-            }
-        }
-    }
-}
+//         .designer,
+//         .coder {
+//             h1 {
+//                 font-size: 1.25rem;
+//             }
+//         }
+//     }
+// }
 
-@media only screen and (min-width: 376px) {
-    .face {
+// @media only screen and (min-width: 376px) {
+//     .face {
 
-        .designer,
-        .coder {
-            h1 {
-                font-size: 1.5rem;
-            }
-        }
-    }
-}
+//         .designer,
+//         .coder {
+//             h1 {
+//                 font-size: 1.5rem;
+//             }
+//         }
+//     }
+// }
 
-@media only screen and (min-width: 500px) {
-    .face {
+// @media only screen and (min-width: 500px) {
+//     .face {
 
-        .designer,
-        .coder {
-            h1 {
-                font-size: 1.75rem;
-            }
-        }
-    }
-}
+//         .designer,
+//         .coder {
+//             h1 {
+//                 font-size: 1.75rem;
+//             }
+//         }
+//     }
+// }
 
 
-@media only screen and (min-width: 600px) {
-    .face {
+// @media only screen and (min-width: 600px) {
+//     .face {
 
-        .designer,
-        .coder {
-            h1 {
-                font-size: 2.25rem;
-            }
-        }
-    }
-}
+//         .designer,
+//         .coder {
+//             h1 {
+//                 font-size: 2.25rem;
+//             }
+//         }
+//     }
+// }
 
-@media only screen and (min-width: 750px) {
-    .face {
+// @media only screen and (min-width: 750px) {
+//     .face {
 
-        .designer,
-        .coder {
-            width: 25%;
-            height: 35%;
+//         .designer,
+//         .coder {
+//             width: 25%;
+//             height: 35%;
 
-            h1 {
-                font-size: 2.25rem;
-            }
+//             h1 {
+//                 font-size: 2.25rem;
+//             }
 
-            .more {
-                display: none;
-            }
+//             .more {
+//                 display: none;
+//             }
 
-            p {
-                display: block;
-                font-size: 1rem;
-                margin: 0px;
-            }
-        }
-    }
-}
+//             p {
+//                 display: block;
+//                 font-size: 1rem;
+//                 margin: 0px;
+//             }
+//         }
+//     }
+// }
 
-@media only screen and (min-width: 860px) {
-    .face {
+// @media only screen and (min-width: 860px) {
+//     .face {
 
-        .designer,
-        .coder {
-            width: 30%;
-            height: 30%;
+//         .designer,
+//         .coder {
+//             width: 30%;
+//             height: 30%;
 
-            h1 {
-                font-size: 2.5rem;
-            }
+//             h1 {
+//                 font-size: 2.5rem;
+//             }
 
-            p {
-                font-size: 1.2rem;
-            }
-        }
-    }
-}
+//             p {
+//                 font-size: 1.2rem;
+//             }
+//         }
+//     }
+// }
 
-@media only screen and (min-width: 1024px) {
-    .face {
+// @media only screen and (min-width: 1024px) {
+//     .face {
 
-        .designer,
-        .coder {
-            height: 40%;
+//         .designer,
+//         .coder {
+//             height: 40%;
 
-            h1 {
-                font-size: 2rem;
-            }
+//             h1 {
+//                 font-size: 2rem;
+//             }
 
-            .more {
-                display: inline;
-            }
-        }
-    }
-}
+//             .more {
+//                 display: inline;
+//             }
+//         }
+//     }
+// }
 
 @media only screen and (min-width: 1140px) {
     .face {
@@ -203,7 +230,7 @@
             .description {
                 position: absolute;
                 top: 80px;
-                width: 270px;
+                width: 320px;
                 right: 0px;
             }
 
@@ -218,10 +245,10 @@
                 background-position: 0px -751px;
             }
 
-            p {
-                font-size: 1rem;
-                line-height: 1.4em;
-            }
+            // p {
+            //     font-size: 1rem;
+            //     line-height: 1.4em;
+            // }
         }
 
         .designer {
@@ -234,7 +261,7 @@
             .description {
                 position: absolute;
                 top: 80px;
-                width: 270px;
+                width: 320px;
                 left: 0px;
             }
 
@@ -249,10 +276,10 @@
                 background-position: 0px -892px;
             }
 
-            p {
-                font-size: 1rem;
-                line-height: 1.4em;
-            }
+            // p {
+            //     font-size: 1rem;
+            //     line-height: 1.4em;
+            // }
         }
 
         .designer-img {
@@ -306,6 +333,7 @@
     }
 }
 
+// mobile version 
 .mobile_i-am-rafa {
     height: 100vh;
     padding: 0;
@@ -317,6 +345,13 @@
     @include tablet {
         display: none;
         visibility: hidden;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: -5rem;
+
+        text-align: center;
     }
 }
 
