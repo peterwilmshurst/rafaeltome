@@ -1,3 +1,64 @@
+// blog listing
+.blog {
+
+    // blog global
+    date {
+        font-weight: 100;
+        color: $brand-grey;
+        font-size: 1rem;
+    }
+
+    .card {
+        height: 100%;
+
+        .card-content {
+            h5 {
+                margin-bottom: 1rem;
+            }
+
+            .excerpt {
+                margin-bottom: 3rem;
+                font-size: 1.125rem;
+            }
+
+            a {
+                &.read-more {
+                    position: absolute;
+                    bottom: 1.5rem;
+                    left: 1.5rem;
+                    margin-top: 1.5rem;
+
+                    color: $brand-red;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// most popular
+.blog-most-popular {
+    margin-bottom: 1.5rem;
+    box-shadow: rgba(46, 46, 45, 0.1) 0px 0.5em 1em -0.125em, rgba(46, 46, 45, 0.02) 0px 0px 0px 1px;
+
+    &--image {
+        padding: 0;
+        margin: 0;
+    }
+
+    &--content {
+        .excerpt {
+            font-weight: 100;
+            font-size: 1.125rem;
+        }
+    }
+}
+
+// blog detail
 .blog-detail {
     img {
         margin-top: 1rem;
