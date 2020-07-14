@@ -11,6 +11,12 @@
     .card {
         height: 100%;
 
+        .card-image {
+            img {
+                min-width: 100%;
+            }
+        }
+
         .card-content {
             h5 {
                 margin-bottom: 1rem;
@@ -48,6 +54,9 @@
     &--image {
         padding: 0;
         margin: 0;
+        img {
+            min-width: 100%;
+        }
     }
 
     &--content {
