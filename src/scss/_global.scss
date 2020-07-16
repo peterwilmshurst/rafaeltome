@@ -276,7 +276,21 @@ section {
     order: 2;
 }
 
-//margin
+// padding
+
+@include desktop {
+    .inset {
+        &.left {
+            padding-left: 2.5rem;
+        }
+
+        &.right {
+            padding-right: 2.5rem;
+        }
+    }
+}
+
+// margin
 .mt-1 {
     margin-top: 1rem;
 }
