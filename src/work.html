@@ -98,7 +98,7 @@ function loadProject(projectID) {
         var moduleHTML = "";
 
         var moduleTitle = "";
-        moduleTitle += "<h1 class='underline'>" + loadModules.name + "</h1>";
+        moduleTitle += "<h1 id='#" + loadModules.slug + "' class='underline'>" + loadModules.name + "</h1>";
         $(".module-title").html(moduleTitle);
 
         var moduleDescription = "";

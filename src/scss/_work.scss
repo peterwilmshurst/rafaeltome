@@ -1,6 +1,5 @@
 .projects {
     .overlay {
-        &--image {}
 
         &--text {
             position: absolute;
@@ -17,6 +16,7 @@
 
             &:hover {
                 background-color: rgba($color: $brand-red, $alpha: 0.9);
+
                 p {
                     visibility: visible;
                     display: flex;
@@ -24,8 +24,8 @@
                     justify-content: center;
                     height: 100%;
                     width: 100%;
-                    padding: 1.25rem;  
-                    text-align: center;       
+                    padding: 1.25rem;
+                    text-align: center;
                 }
             }
         }
