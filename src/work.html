@@ -13,31 +13,40 @@
     <!--=include ./partials/header.html -->
 
     <div class="container">
+
+        <!--keep? -->
         <div class="column is-full">
             <h1 class="underline">my featured work</h1>
             <p>Here is a curated portfolio of both client and personal work from my roles as UX Designer, Illustrator and creative director. You can find more illustration work <a href="#">here</a>.</p>
         </div>
-    </div>
 
-    <div class="column is-full">
 
-        <div class="columns">
+        <div class="column is-full">
 
-            <div class="column is-6">
+            <div class="columns">
 
-                <div class="module-title">
-                    <h1 class="underline">my featured work</h1>
+                <div class="column is-6">
+
+                    <div class="module-title">
+                        <h1 class="underline">my featured work</h1>
+                    </div>
+
+                    <div class="module-description">
+                        <p>Here is a curated portfolio of both client and personal work from my roles as UX Designer, Illustrator and creative director. You can find more illustration work <a href="#">here</a>.</p>
+                    </div>
+
+                    <div class="module-url">
+
+                    </div>
+
                 </div>
 
-                <div class="module-description">
-                    <p>Here is a curated portfolio of both client and personal work from my roles as UX Designer, Illustrator and creative director. You can find more illustration work <a href="#">here</a>.</p>
-                </div>
-
-            </div>
-
-            <div id="right-column" class="column is-6">
-                <div class="modules">
-                    <img src="img/creative-leadership-innovative-mindset@2x.jpg">
+                <div id="right-column" class="column is-6">
+                    <div class="modules">
+                        <figure class="image">
+                            <img src="img/creative-leadership-innovative-mindset@2x.jpg">
+                        </figure>
+                    </div>
                 </div>
             </div>
         </div>
@@ -45,10 +54,10 @@
 
     <section class="has-yellow-bg">
         <div class="column is-full">
-                <ul class="projects columns is-multiline is-gapless">
-                    <!-- Behance Projects -->
-                </ul>
-            </div>
+            <ul class="projects columns is-multiline is-gapless">
+                <!-- Behance Projects -->
+            </ul>
+        </div>
         </div>
     </section>
 
@@ -89,12 +98,16 @@ function loadProject(projectID) {
         var moduleHTML = "";
 
         var moduleTitle = "";
-        moduleTitle += "<h1>" + loadModules.name + "</h1>";
+        moduleTitle += "<h1 class='underline'>" + loadModules.name + "</h1>";
         $(".module-title").html(moduleTitle);
 
         var moduleDescription = "";
         moduleDescription += "<p>" + loadModules.description + "</p>";
         $(".module-description").html(moduleDescription);
+
+        var moduleUrl = "";
+        moduleUrl += "<a href='" + loadModules.url + "' target='_blank'>link</a>";
+        $(".module-url").html(moduleUrl);
 
         for (var i = 0; i < loadModules.modules.length; i++) {
             if (loadModules.modules[i].src != undefined) {
@@ -115,9 +128,9 @@ $(document).ready(function() {
         for (var i = 0; i < projectlist.length; i++) {
             var project = projectlist[i];
 
-console.log(project);
+            console.log(project);
 
-            projectHTML += "<li class='column is-3'><a href='#" + project.slug + "' onclick='loadProject(" + project.id + ")'><img src='" + project.covers[404] + "'></a></li>";
+            projectHTML += "<li class='column is-3'><a href='#" + project.slug + "' onclick='loadProject(" + project.id + ")'><figure class='image overlay'><img class='overlay--image' src='" + project.covers[404] + "' alt='" + project.name + "'><figcaption class='overlay--text'><p>" + project.name + "</p></figcaption></figure></a></li>";
         }
         $(".projects").html(projectHTML);
     });

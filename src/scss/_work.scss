@@ -1,3 +1,34 @@
-.modules {
-    img { width: 100%;}
+.projects {
+    .overlay {
+        &--image {}
+
+        &--text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            p {
+                display: none;
+                visibility: hidden;
+                color: $white;
+            }
+
+            &:hover {
+                background-color: rgba($color: $brand-red, $alpha: 0.9);
+                p {
+                    visibility: visible;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
+                    width: 100%;
+                    padding: 1.25rem;  
+                    text-align: center;       
+                }
+            }
+        }
+    }
+
 }
