@@ -7,6 +7,8 @@
 
 //=include partials/slider.js
 
+//=include partials/behance.js
+
 (function () {
     $.fatNav();
 }());

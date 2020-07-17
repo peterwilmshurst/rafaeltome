@@ -13,39 +13,44 @@
     <!--=include ./partials/header.html -->
 
     <div class="container">
-
         <div class="column is-full">
             <h1 class="underline">my featured work</h1>
             <p>Here is a curated portfolio of both client and personal work from my roles as UX Designer, Illustrator and creative director. You can find more illustration work <a href="#">here</a>.</p>
         </div>
+    </div>
 
-        <section class="behance-project-detail">
-            <div class="column is-full">
-                <div class="columns">
-                    <div class="column">
-                        <div class="images">
-                            <ul class="modules">
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="description">
-                            <div class="wrapper">
-                                <div class="module-title"></div>
-                                <div class="module-description"></div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="column is-full">
+
+        <div class="columns">
+
+            <div class="column is-6">
+
+                <div class="module-title">
+                    <h1 class="underline">my featured work</h1>
+                </div>
+
+                <div class="module-description">
+                    <p>Here is a curated portfolio of both client and personal work from my roles as UX Designer, Illustrator and creative director. You can find more illustration work <a href="#">here</a>.</p>
+                </div>
+
+            </div>
+
+            <div id="right-column" class="column is-6">
+                <div class="modules">
+                    <img src="img/creative-leadership-innovative-mindset@2x.jpg">
                 </div>
             </div>
-        </section>
-
-        <section class="behance-projects">
-            <div class="column is-full">
-                <ul class="columns is-multiline projects"></ul>
-            </div>
-        </section>
+        </div>
     </div>
+
+    <section class="has-yellow-bg">
+        <div class="column is-full">
+                <ul class="projects columns is-multiline is-gapless">
+                    <!-- Behance Projects -->
+                </ul>
+            </div>
+        </div>
+    </section>
 
     <section class="has-red-bg">
         <div class="container">
@@ -68,13 +73,57 @@
         </div>
     </section>
 
-
-
-    <!--=include ./partials/portfolio.html -->
-
-
     <!--=include ./partials/footer.html -->
 </body>
 <!--=include ./partials/end.html -->
+
+
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script type="text/javascript">
+var username = "rafaeltome";
+
+function loadProject(projectID) {
+    behanceAPI.getProjectDetails(projectID, function(loadModules) {
+        var moduleHTML = "";
+
+        var moduleTitle = "";
+        moduleTitle += "<h1>" + loadModules.name + "</h1>";
+        $(".module-title").html(moduleTitle);
+
+        var moduleDescription = "";
+        moduleDescription += "<p>" + loadModules.description + "</p>";
+        $(".module-description").html(moduleDescription);
+
+        for (var i = 0; i < loadModules.modules.length; i++) {
+            if (loadModules.modules[i].src != undefined) {
+                moduleHTML += "<p><img src='" + loadModules.modules[i].src + "'></p>";
+            }
+        }
+        $(".modules").html(moduleHTML);
+    });
+}
+
+$(document).ready(function() {
+    // Set behance api key
+    behanceAPI.setKey(behancekey);
+
+    // Get projects
+    behanceAPI.getProjects("rafaeltome", function(projectlist) {
+        var projectHTML = "";
+        for (var i = 0; i < projectlist.length; i++) {
+            var project = projectlist[i];
+
+console.log(project);
+
+            projectHTML += "<li class='column is-3'><a href='#" + project.slug + "' onclick='loadProject(" + project.id + ")'><img src='" + project.covers[404] + "'></a></li>";
+        }
+        $(".projects").html(projectHTML);
+    });
+});
+</script>
+
+
 
 </html>
