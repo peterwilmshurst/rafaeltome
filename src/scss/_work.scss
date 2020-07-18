@@ -1,3 +1,4 @@
+// behance project thumbnail 
 .projects {
     .overlay {
 
@@ -12,6 +13,11 @@
                 display: none;
                 visibility: hidden;
                 color: $white;
+
+                span {
+                    font-weight: 700;
+                    color: $brand-dark-red;
+                }
             }
 
             &:hover {
@@ -32,3 +38,46 @@
     }
 
 }
+
+// behance project description 
+
+.module-title {
+    h1 {
+        line-height: 3.75rem;
+    }
+}
+
+.module-client {
+    h2 {
+        font-size: 1.25rem;
+        color: $brand-red;
+    }
+}
+
+.module-credits {
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1.125rem;
+        font-weight: 100;
+    }
+
+    p {  font-size: 1.25rem;
+        font-weight: 700;}
+}
+
+.module-url {}
+
+
+// remove?
+// .module-fields {
+//     ul {
+//         padding: 1.25rem 2.5rem;
+
+//         li {
+//             list-style-type: disc;
+//         }
+//     }
+// }
