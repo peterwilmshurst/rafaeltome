@@ -290,6 +290,10 @@ section {
 
 @include desktop {
     .inset {
+        &.full {
+            padding: 2.5rem;
+        }
+        
         &.left {
             padding-left: 2.5rem;
         }
@@ -386,7 +390,6 @@ section {
 .pr-2 {
     padding-right: 2rem;
 }
-
 
 .lead {
     font-weight: 700;
