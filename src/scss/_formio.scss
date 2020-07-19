@@ -1,0 +1,27 @@
+.formio-form--wrap {
+    margin-bottom: 1.25rem;
+
+    .formio-form {
+        .formio-component {
+            @extend .field;
+
+            div {
+                &:first-child {
+                    @extend .control;
+                }
+            }
+
+            .form-control {
+                @extend .input;
+                @extend .is-large;
+            }
+
+            .btn {
+                @extend .button;
+                @extend .is-large;
+                @extend .is-black;
+                color: $white !important; //force white
+            }
+        }
+    }
+}

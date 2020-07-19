@@ -132,6 +132,11 @@ a {
             background-color: $brand-red;
         }
     }
+
+    &.block {
+        text-decoration: none;
+        font-weight: inherit;
+    }
 }
 
 /* spacing */
