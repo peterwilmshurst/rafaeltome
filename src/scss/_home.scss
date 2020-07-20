@@ -3,7 +3,7 @@
     display: none;
     visibility: hidden;
 
-    @include tablet {
+    @include desktop {
         display: flex;
         visibility: visible;
     }
@@ -23,7 +23,7 @@
 }
 
 .mobile_scroll-down {
-    @include tablet {
+    @include desktop {
         display: none;
         visibility: hidden;
     }
@@ -168,7 +168,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include tablet {
+    @include desktop {
         display: none;
         visibility: hidden;
     }
