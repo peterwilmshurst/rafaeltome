@@ -100,18 +100,6 @@ h5 {
     font-size: 1.375rem;
 }
 
-/* body cards
-font-family: Futura PT, Arial, sans-serif; 
-font-weight: bold; 
-font-size: 1.125rem;
- */
-
-/* button text
- font-family: Futura PT, Arial, sans-serif; 
- font-weight: bold; 
- font-size: 1.25rem;
- */
-
 a {
     color: $brand-black;
     font-weight: 700;
@@ -125,11 +113,30 @@ a {
         text-decoration: none !important;
         padding: 1.5rem 2rem;
         font-size: 1.375rem;
+        
+        transition: background-color 100ms linear, color 100ms linear;
 
         &.is-red {
             color: $white;
             background-color: $brand-red;
             border: $brand-red;
+            &:hover {
+                background-color: $white;
+                color: $brand-red;
+            }
+        }
+
+        &.is-black {
+            &:hover {
+                background-color: $brand-red;
+            }
+        }
+
+        &.is-white {
+            &:hover {
+                background-color: $brand-red;
+                color: $white;
+            }
         }
     }
 
