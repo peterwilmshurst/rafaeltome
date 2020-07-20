@@ -10,3 +10,8 @@
 (function () {
     $.fatNav();
 }());
+
+// add yellow bg to section once project has been loaded
+$(".projects").on('click', 'li', function() {
+    $('#behanceProjects').addClass('has-yellow-bg');
+    });
