@@ -16,4 +16,4 @@ $(".projects").on('click', 'li', function() {
     $('#behanceProjects').addClass('has-yellow-bg');
     // scroll to top
     $("html, body").delay('250').animate({ scrollTop: 0 }, 2000);
-    });
+});

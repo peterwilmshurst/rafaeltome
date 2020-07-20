@@ -9,10 +9,20 @@
 
 </head>
 
-<body class="about">
+<body class="about no-bg-header">
     <!--=include ./partials/header.html -->
-
-    <div class="is-hidden-mobile">
+    <script>
+    // hide/reveal header bg colour for about us page
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 500) {
+            $("body").removeClass("no-bg-header");
+        } else {
+            $("body").addClass("no-bg-header");
+        }
+    });
+    </script>
+    <div class="video-header is-hidden-mobile">
         <video autoplay loop>
             <!-- <source src="vid/about.webm" type="video/webm"> -->
             <source src="./vid/about.mp4" type="video/mp4">

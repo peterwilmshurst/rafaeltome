@@ -3,7 +3,17 @@ header {
     top: 0;
     padding: 1rem .75rem;
     background-color: $white;
+    transition: background-color 1s linear;
     z-index: 10;
+}
+
+// no bg for header (about us page)
+.no-bg-header {
+    @include desktop {
+        header {
+            background-color: transparent;
+        }
+    }
 }
 
 .logo {
@@ -109,7 +119,7 @@ header {
 .fat-nav {
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 100;
     position: fixed;
     display: none;
     width: 100%;
