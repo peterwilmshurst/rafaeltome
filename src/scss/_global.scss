@@ -60,8 +60,7 @@ h6 {
 
         &.center {
             &:before {
-                left: 50%;
-                // need to minus 3.125rem (width)
+                left: 37%; // specific to kind words (about page) - needs a generic solution
             }
         }
     }
