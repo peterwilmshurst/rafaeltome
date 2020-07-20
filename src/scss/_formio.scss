@@ -22,6 +22,61 @@
                 @extend .is-black;
                 color: $white !important; //force white
             }
+
+            // text area
+            textarea.form-control {
+                max-height: 40em !important;
+                min-height: 8em !important;
+            }
+
+            // dropdown
+            .selection {
+                font-size: 1.5rem!important;
+                .choices__item--selectable {
+                    font-weight: normal;
+                    font-size: 1.5rem!important;
+                }
+            }
         }
+    }
+}
+
+// validation
+.button[disabled], .formio-form--wrap .formio-form .formio-component .btn[disabled], fieldset[disabled] .button, fieldset[disabled] .formio-form--wrap .formio-form .formio-component .btn, .formio-form--wrap .formio-form .formio-component fieldset[disabled] .btn {
+    background-color: $brand-black;
+    border-color: $brand-black;
+}
+
+.alert {
+    &.alert-success {
+        color: $brand-red;
+    }
+}
+
+.form-text {
+    &.error {
+        color: $brand-red;
+        font-weight: 700;
+    }
+}
+
+.help-block {
+    color: $brand-red;
+}
+
+.has-grey-bg {
+    .form-text {
+        &.error {
+            color: $white;
+            font-weight: 700;
+        }
+    }
+    .alert {
+        &.alert-success {
+            color: $white;
+        }
+    }
+    .help-block {
+        color: $white;
     }
 }
