@@ -19,5 +19,16 @@ footer {
             color: $white;
             text-decoration: underline;
         }
+
+        &.pw {
+            font-weight: normal;
+            color:$white;
+            span {
+                color:#39b54a;
+            }
+            &:hover {
+                color:#39b54a;
+            }
+        }
     }
 }
