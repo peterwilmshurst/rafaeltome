@@ -14,4 +14,8 @@
 // add yellow bg to section once project has been loaded
 $(".projects").on('click', 'li', function() {
     $('#behanceProjects').addClass('has-yellow-bg');
+
+    // scroll to top
+    event.preventDefault();
+    $("html, body").delay('250').animate({ scrollTop: 0 }, 2000);
     });
