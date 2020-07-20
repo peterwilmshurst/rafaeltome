@@ -142,7 +142,7 @@ header {
         li {
             list-style-type: none;
             text-align: left;
-            padding: 0.625rem 1.25rem;
+            padding: 0.625rem 2.5rem;
             font-size: 2em;
             color: $white;
 
@@ -162,10 +162,10 @@ header {
 // Social Overlay
 .social-overlay {
     position: fixed;
-    bottom: 1rem;
-    right: 2rem;
+    bottom: 2.5rem;
+    left: 2.5rem;
     z-index: 2;
-    text-align: right;
+    text-align: left;
     font-size: 1rem;
 
     a {
