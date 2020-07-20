@@ -14,30 +14,34 @@
     <section id="section" class="ugly-mug">
         <div id="face" class="face">
 
-            <div id="designer" class="designer" style="opacity: 1;">
-                <div id="designer-desc" class="description" style="opacity: 1;">
-                    <hgroup>
-                        <h1>Hello,<br />
-                            I’m Rafael Tome </h1>
-                        <h2 class="subheading">A UXUI Designer &amp; Illustrator</h2>
-                    </hgroup>
-                    <p>I love crafting smart, beautiful and targeted work that is based on your business’ goals and your customer’s needs through multiple touch points.</p>
-                    <a href="./about.html" class="button is-black">more about me</a>
+            <a href="./about.html">
+                <div id="designer" class="designer" style="opacity: 1;">
+                    <div id="designer-desc" class="description" style="opacity: 1;">
+                        <hgroup>
+                            <h1>Hello,<br />
+                                I’m Rafael Tome </h1>
+                            <h2 class="subheading">A UXUI Designer &amp; Illustrator</h2>
+                        </hgroup>
+                        <p>I love crafting smart, beautiful and targeted work that is based on your business’ goals and your customer’s needs through multiple touch points.</p>
+                        <p class="button is-black">more about me</p>
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <div id="coder" class="coder" style="opacity: 1;">
-                <div id="coder-desc" class="description" style="opacity: 1;">
-                    <hgroup>
-                        <h1>I help solve<br />
-                            business problems</h1>
-                        <h2 class="subheading">A Creative Director & Brand Strategist</h2>
-                    </hgroup>
-                    <p>From strategy to project delivery, every step counts to ensure creative vision and execution are aligned with clients’ requirements and their customers’ needs.</p>
-                    <a href="./contact.html" class="button is-black">let's talk</a>
+            <a href="./contact.html">
+                <div id="coder" class="coder" style="opacity: 1;">
+
+                    <div id="coder-desc" class="description" style="opacity: 1;">
+                        <hgroup>
+                            <h1>I help solve<br />
+                                business problems</h1>
+                            <h2 class="subheading">A Creative Director & Brand Strategist</h2>
+                        </hgroup>
+                        <p>From strategy to project delivery, every step counts to ensure creative vision and execution are aligned with clients’ requirements and their customers’ needs.</p>
+                        <p class="button is-black">let's talk</p>
+                    </div>
                 </div>
-            </div>
-
+            </a>
 
             <img id="face-img" class="face-img" src="./img/rafael-tome-designer-director.jpg" alt="Rafael Tome. Senior UX/UI Designer, Creative Director" style="opacity: 1;">
             <div id="designer-img" class="designer-img" style="left: 100px; opacity: 1; width: 420px;"></div>
@@ -45,6 +49,16 @@
             <div id="designer-bg" class="designer-bg" style="left: 100px; opacity: 1;"></div>
             <div id="coder-bg" class="coder-bg" style="right: 100px; opacity: 1;"></div>
         </div>
+
+        <script>
+        $(document).ready(function() {
+            // Function to fade in image sprites
+            $('.sprite').fadeSprite();
+
+            //Show the page once images are loaded	
+            $('#face').animateHome();
+        });
+        </script>
     </section>
 
     <div class="scroll-down"><img src="./img/scroll-down.gif" alt="scroll down"></div>

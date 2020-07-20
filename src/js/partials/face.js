@@ -1,16 +1,3 @@
-$(document).ready(function () {
-
-    // Function to fade in image sprites
-    $('.sprite').fadeSprite();
-
-    // Function to animate when leaving page
-    $('#face a').leavePage();
-
-    //Show the page once images are loaded	
-    $('#face').animateHome();
-    $('#face').resizeFace();
-});
-
 /* 
  * Function to fade in image sprites on hover
  */
@@ -28,26 +15,6 @@ $.fn.fadeSprite = function () {
             opacity: 0
         }, 300);
 
-    });
-};
-
-/* 
- * Function to animate leaving a page
- */
-$.fn.leavePage = function () {
-
-    this.click(function (event) {
-
-        event.preventDefault();
-        linkLocation = this.href;
-
-        $('#header').animate({
-            'opacity': '0',
-            'top': '-92px'
-        }, 500, 'easeOutExpo');
-        $('body').fadeOut(500, function () {
-            window.location = linkLocation;
-        });
     });
 };
 
@@ -73,54 +40,6 @@ function animateContent() {
     }, 500, 'easeOutExpo');
 };
 
-/* 
- * Function to switch face on browser resize
- */
-$.fn.resizeFace = function () {
-
-    $(window).resize(function () {
-
-        // Show large face
-        if ($(window).width() >= 1140) {
-
-            $('#designer-img').css({
-                'opacity': '1'
-            });
-            $('#coder-img').css({
-                'opacity': '1'
-            });
-            $('#designer-bg').css({
-                'opacity': '1'
-            });
-            $('#coder-bg').css({
-                'opacity': '1'
-            });
-            $('#designer').css({
-                'opacity': '1'
-            });
-            $('#coder').css({
-                'opacity': '1'
-            });
-
-        } else { // Show smaller face image
-
-            $('#face-img').css({
-                'opacity': '1'
-            });
-            $('#designer').css({
-                'opacity': '1'
-            });
-            $('#coder').css({
-                'opacity': '1'
-            });
-        }
-
-    });
-};
-
-/* 
- * Function to animate home page
- */
 $.fn.animateHome = function () {
 
     // only animate for large desktop browsers
@@ -189,12 +108,8 @@ function animateFace() {
 
     var designerImg = $('#designer-img');
     var coderImg = $('#coder-img');
-    var designerHover = $('#designer');
-    var coderHover = $('#coder');
     var designerDesc = $('#designer-desc');
     var coderDesc = $('#coder-desc');
-    var designerArrow = $('#designer-arrow');
-    var coderArrow = $('#coder-arrow');
     var designerBg = $('#designer-bg');
     var coderBg = $('#coder-bg');
     var face = $('#face');
