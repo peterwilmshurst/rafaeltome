@@ -1,5 +1,5 @@
 # rafaeltome.com
-Rafael Tome public website (v1). 
+Rafael Tome public website (v1).  
 **July 2020**
 
 ## Features
