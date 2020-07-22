@@ -75,6 +75,7 @@
             width: auto;
             height: 100%;
             object-fit: cover;
+            max-height: 16rem;
         }
     }
 
@@ -87,9 +88,15 @@
 }
 
 // blog detail
-.blog-detail {
-    img {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+.blog-article {
+    .image {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+    ul {
+        padding: 1.25rem 3.75rem;
+        li {
+            list-style-type: disc;
+        }
     }
 }

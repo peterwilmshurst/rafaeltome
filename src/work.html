@@ -128,8 +128,6 @@ $(document).ready(function() {
         for (var i = 0; i < projectlist.length; i++) {
             var project = projectlist[i];
 
-            console.log(project);
-
             projectHTML += "<li class='column is-3'><a href='#" + project.slug + "' onclick='loadProject(" + project.id + ")'><figure class='image overlay'><img class='overlay--image' src='" + project.covers[404] + "' alt='" + project.name + "'><figcaption class='overlay--text'><p>" + project.name + "<br /><span class='note'>" + project.fields[0] + ",&nbsp" + project.fields[1] + ",&nbsp" + project.fields[2] + "</p></figcaption></figure></a></li>";
         }
         $(".projects").html(projectHTML);

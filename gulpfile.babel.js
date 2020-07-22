@@ -48,12 +48,6 @@ function clean() {
     return del(['dist/**/*']);
 };
 
-function copy() {
-    return gulp.src('./src/docs/**/*')
-        .pipe(gulp.dest('./dist/docs'))
-        .pipe(browserSync.reload({ stream: true }));
-};
-
 gulp.task('serve', () => {
     browserSync.init({
         server: {
@@ -67,7 +61,6 @@ gulp.task('serve', () => {
     gulp.watch('./src/js/**/*.js', gulp.series('js'));
     gulp.watch('./src/scss/**/*', gulp.series('css'));
     gulp.watch('./src/images/**/*', gulp.series('images'));
-    gulp.watch('./src/docs/**/*', gulp.series('copy'));
     gulp.watch('./dist/*').on('change', browserSync.reload);
 });
 
@@ -76,10 +69,9 @@ gulp.task('html', html);
 gulp.task('js', js);
 gulp.task('css', css);
 gulp.task('images', images);
-gulp.task('copy', copy);
 
 // watch task
 gulp.task('default', gulp.series('serve'));
 
 // deploy task
-gulp.task('deploy', gulp.parallel(html, js, css, images, copy));
+gulp.task('deploy', gulp.parallel(html, js, css, images));

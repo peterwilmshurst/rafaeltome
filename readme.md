@@ -1,15 +1,14 @@
-# Initiate
-### Version 3
+# rafaeltome.com
+Rafael Tome public website (v1).  
+**July 2020**
 
-Project startup which includes:
+## Features
+- Behance API
+- Form.io integration
+- Google Tag Manager
 
-- Gulp
-- Babel
-- SASS
-- Minification 
-
-### Optional
-
-- Bulma
-- Slick Carousel
-
+## Dependencies
+- gulp
+- babel
+- bulma
+- slick-carousel
